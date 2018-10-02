@@ -7,8 +7,7 @@ class Application
     req = Rack::Request.new(env)
 
     if req.path.match(/items/)
-      @@items.each { |item|
-        print_items(item)
+      @@items.each { |item| print_items(item) }
       end
     elsif req.path.match(/search/)
       search_term = req.params["q"]
