@@ -25,7 +25,7 @@ class Application
   end
   
   def print_items
-    
+    resp.write "#{item}\n"
   end
     
   def handle_search(search_term)
