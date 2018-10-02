@@ -15,7 +15,7 @@ class Application
       if !cart.empty?
         @@cart.each { |item| print_items(item) }
       else
-        req.write
+        req.write "Your cart is empty."
       end
     else
       resp.write "Path Not Found"
