@@ -22,10 +22,9 @@ class Application
     elsif req.path.match(/add/)
       add_item = req.params["item"]
       if !@@items.include? add_item
- 
-      else
         resp.write "#{add_item} is already in your cart."
-               @@cart << add_item
+      else
+        @@cart << add_item
         resp.write "#{add_item} has been added to your cart."
       end
     else
