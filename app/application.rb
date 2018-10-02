@@ -25,7 +25,7 @@ class Application
         resp.write "#{add_item} is already in your cart."
       else
         @@cart << add_item
-        resp.write "#{add_item} has been added to your cart."
+        resp.write "added #{add_item} has been added to your cart."
       end
     else
       resp.write "Path Not Found"
